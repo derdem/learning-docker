@@ -1,7 +1,5 @@
 FROM node:latest
 
-COPY . /application
-
 WORKDIR /application
 
 RUN chmod +x /application
