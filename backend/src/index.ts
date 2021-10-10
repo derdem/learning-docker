@@ -1,5 +1,7 @@
 // @ts-nocheck
 import express from "express";
+import jwt from "jsonwebtoken";
+import getAccessToken from "./jsonwebtoken/accesstoken.js";
 import getUser from "./models/users/queries.js"; 
 import path from "path"; 
 
@@ -19,13 +21,16 @@ router.get("/login", (request, response) => {
 
 router.post("/login", async (request, response) => {
     const {email, password} = request.body;
-    console.log(email, password)
     const user = await getUser({email, password})
         .catch((error) => {
             console.error(new Error(error));
             return []
         });
-    console.log(user)
+
+    if (user) {
+        const accessToken = jwt.sign({ username: user.email,  role: user.role }, getAccessToken());
+        return response.json(accessToken)
+    }
     return response.send(user)
 })
 
