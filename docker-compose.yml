@@ -3,15 +3,17 @@ services:
   dev: 
     image: node:latest
     volumes: 
-      - .:/application
+      - ./backend:/application
     environment:
       - NODE_ENV=development
     working_dir: /application
-    command: node index.js
+    command: bash -c "npm run build && node ."
     ports: 
       - 3000:3000
   db: 
     image: mysql
+    volumes: 
+      - ./database:/application
     ports: 
       - 3306:3306
     env_file:
