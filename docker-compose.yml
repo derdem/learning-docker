@@ -1,20 +1,38 @@
 version: '3.9'
 services: 
-  dev: 
+  backend: 
     image: node:latest
     volumes: 
       - ./backend:/application
-    environment:
-      - NODE_ENV=development
+    env_file:
+      ./backend/.env
     working_dir: /application
     command: bash -c "npm run build && node ."
     ports: 
       - 3000:3000
-  db: 
+  mysql: 
     image: mysql
     volumes: 
       - ./database:/application
     ports: 
       - 3306:3306
     env_file:
-      .env
+      ./database/.env
+  frontend: 
+    image: node:latest
+    volumes: 
+      - ./frontend:/application
+    working_dir: /application
+    env_file:
+      ./frontend/.env
+    ports:
+      - 4000:4000
+    command: bash -c "yarn && yarn dev"
+  # nginx: 
+  #   image: nginx
+  #   volumes: 
+  #     - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  #   working_dir: /application
+  #   ports:
+  #   - 8080:80
+
