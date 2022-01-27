@@ -1,5 +1,13 @@
 import { poolforApp as connection } from "../../database/connection.js";
 
+// todo: remove password from User interface
+interface User {
+  email: string,
+  password: string,
+  first_name: string,
+  last_name: string,
+  role: string
+}
 interface EmailPassword {
     email: string,
     password: string,
@@ -8,7 +16,7 @@ interface EmailPassword {
 type Resolver = (x: any) => void
 type Rejecter = (x: any) => void
 type QueryComposer = (x: EmailPassword) => string
-type GetUser = (x: EmailPassword) => Promise<EmailPassword>
+type GetUser = (x: EmailPassword) => Promise<User>
 type GetUserCallback = (error: any, result: EmailPassword) => void
 type UserQueryCallbackComposer = (resolve: Resolver, reject: Rejecter) => GetUserCallback
 type PromiseFunctionComposer = (query: string) => (resolve: Resolver, reject: Rejecter) => void
@@ -22,24 +30,24 @@ const queryComposer: QueryComposer = (emailPassword) => {
 
 const userQueryCallbackComposer: UserQueryCallbackComposer = (resolve, reject) => {
     return (error, result) => {
-        console.log(error)
         if (error) reject(`error: ${error.message}`);
-        resolve(result)
-    } 
+        // return first entry of list
+        resolve(result[0])
+    }
 }
 
 const promiseFunctionComposer: PromiseFunctionComposer = (query) => {
     return (resolve, reject) => {
         const userQueryCallback = userQueryCallbackComposer(resolve, reject)
         connection.query(query, userQueryCallback)
-    } 
+    }
 }
 
 const getUser: GetUser = async (emailPassword) => {
     const query = queryComposer(emailPassword);
     const getUser = promiseFunctionComposer(query);
     return new Promise(getUser)
-     
+
 }
 
 export default getUser

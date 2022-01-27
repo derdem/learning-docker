@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.5",
+    "@highlightjs/vue-plugin": "^2.0.1",
     "@vueuse/head": "~0.6",
     "axios": "^0.24.0",
     "pinia": "^2.0.9",
@@ -24,6 +25,7 @@
     "@cypress/vite-dev-server": "~2.2",
     "@cypress/vue": "~3.0",
     "@rushstack/eslint-patch": "^1.1.0",
+    "@tailwindcss/typography": "^0.5.0",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "@vitejs/plugin-vue": "~1.9",

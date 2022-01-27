@@ -2,14 +2,16 @@ import mysql from "mysql2";
 
 export const poolNoDb = mysql.createPool({
     connectionLimit : 10,
-    host: '172.18.0.2',
+    host: 'database',
+    port: 3306,
     user: 'root',
     password: 'envelio123',
 })
 
 export const poolforApp = mysql.createPool({
     connectionLimit : 10,
-    host: '172.18.0.2',
+    host: 'database',
+    port: 3306,
     user: 'root',
     password: 'envelio123',
     database: 'app',

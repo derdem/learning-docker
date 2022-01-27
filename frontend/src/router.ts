@@ -5,11 +5,14 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 const Index = () => import("@/pages/Index.vue");
 const Login = () => import("@/pages/Login.vue");
 const SimpleCentered = () => import("@/pages/SimpleCentered.vue");
+const FunctionalProgramming = () => import("@/pages/FunctionalProgramming.vue");
+const Design = () => import("@/pages/Design.vue");
 
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
     component: Index,
+    name: "Home",
     meta: {
       title: "Home",
     },
@@ -25,6 +28,16 @@ const routes: RouteRecordRaw[] = [
     path: "/centered",
     component: SimpleCentered,
     meta: { title: "centered" },
+  },
+  {
+    path: "/functional-programming",
+    component: FunctionalProgramming,
+    meta: { title: "Functional Programming" },
+  },
+  {
+    path: "/design",
+    component: Design,
+    meta: { title: "Design" },
   },
 ];
 

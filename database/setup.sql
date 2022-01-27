@@ -1,3 +1,7 @@
+CREATE DATABASE app;
+
+USE app;
+
 CREATE TABLE Users (
     id int NOT NULL AUTO_INCREMENT,
     email varchar(255) NOT NULL,
@@ -9,6 +13,6 @@ CREATE TABLE Users (
 );
 
 INSERT INTO Users (email, password, first_name, last_name, role)
-VALUES 
+VALUES
     ('peterlustig@email.com', 'peterlustig', 'peter', 'lustig', 'admin'),
     ('peterpan@email.com', 'peterpan', 'peter', 'pan', 'regular');

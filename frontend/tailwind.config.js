@@ -7,15 +7,16 @@ module.exports = {
     enabled: process.env.NODE_ENV === "production",
     content: ["./index.html", "./src/**/*.{vue,ts}"],
   },
-  // theme: {
-  //   extend: {
-  //     // here's how to extend fonts if needed
-  //     fontFamily: {
-  //       sans: [...defaultTheme.fontFamily.sans],
-  //     },
-  //   },
-  // },
+  theme: {
+    extend: {
+      minWidth: {
+        24: "6rem",
+        96: "18rem",
+      },
+    },
+  },
   plugins: [
+    require("@tailwindcss/typography"),
     plugin(function ({ addVariant, e, postcss }) {
       addVariant("firefox", ({ container, separator }) => {
         const isFirefoxRule = postcss.atRule({
