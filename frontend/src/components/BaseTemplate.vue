@@ -23,18 +23,16 @@
         href="#"
         >IT Operations</a
       >
-      <a
-        class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-        href="#"
-        >Design</a
-      >
+      <router-link to="/design">
+        <a
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#"
+          >Design</a
+        >
+      </router-link>
     </nav>
-    <main class="container flex flex-col">
-      <div
-        class="flex-1 mx-auto bg-gray-700/60 p-4 prose prose-invert min-w-96 md:px-6 prose-indigo sm:rounded-md h-100"
-      >
-        <slot />
-      </div>
+    <main class="flex-grow flex">
+      <slot />
     </main>
   </div>
   <footer class="container py-6 mx-auto text-sm text-center text-gray-400">

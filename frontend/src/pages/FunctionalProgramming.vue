@@ -1,5 +1,5 @@
 <template>
-  <BaseTemplateVue>
+  <ArticleTemplateVue>
     <article>
       <h2>Functional Programming</h2>
       <p>
@@ -135,11 +135,11 @@ function addDivToBody(text: string): void {
         code
       </p>
     </article>
-  </BaseTemplateVue>
+  </ArticleTemplateVue>
 </template>
 
 <script setup lang="ts">
-import BaseTemplateVue from "@/components/BaseTemplate.vue";
+import ArticleTemplateVue from "@/components/ArticleTemplate.vue";
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 const highlightjs = hljsVuePlugin.component;
 </script>

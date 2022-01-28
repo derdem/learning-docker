@@ -7,6 +7,7 @@ const Login = () => import("@/pages/Login.vue");
 const SimpleCentered = () => import("@/pages/SimpleCentered.vue");
 const FunctionalProgramming = () => import("@/pages/FunctionalProgramming.vue");
 const Design = () => import("@/pages/Design.vue");
+const Animations = () => import("@/pages/Animations.vue");
 
 const routes: RouteRecordRaw[] = [
   {
@@ -37,7 +38,14 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/design",
     component: Design,
+    name: "Design",
     meta: { title: "Design" },
+  },
+  {
+    path: "/animations",
+    component: Animations,
+    name: "Animations",
+    meta: { title: "Animations" },
   },
 ];
 

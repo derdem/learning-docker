@@ -1,7 +1,28 @@
 <template>
-  <BaseTemplateVue> <a href="https://pixabay.com">Pixabay</a></BaseTemplateVue>
+  <CompleteWidthTemplateVue>
+    <div class="grid grid-cols-2 gap-4">
+      <router-link to="/animations">
+        <div class="m-2 p-2 w-32 h-32 bg-slate-700 hover:custom">
+          <img src="@/assets/earthAnimation.gif" />
+          Animation
+        </div>
+      </router-link>
+
+      <div class="m-2 p-2 w-32 h-32 bg-slate-700">
+        <img src="@/assets/resources.jpeg" />
+        Resources
+      </div>
+    </div>
+    <!-- <a href="https://pixabay.com">Pixabay</a> -->
+  </CompleteWidthTemplateVue>
 </template>
 
 <script setup lang="ts">
-import BaseTemplateVue from "@/components/BaseTemplate.vue";
+import CompleteWidthTemplateVue from "@/components/CompleteWidthTemplate.vue";
 </script>
+
+<style scoped lang="scss">
+.custom {
+  background-color: aquamarine;
+}
+</style>
