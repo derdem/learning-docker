@@ -5,7 +5,7 @@
     </h1>
   </header>
   <div class="flex flex-row">
-    <nav class="md:block px-4 pb-4 md:pb-0 md:overflow-y-auto text-gray-400">
+    <nav class="min-w-fit px-4 pb-4 text-gray-400">
       <router-link to="/functional-programming">
         <a
           class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -31,7 +31,7 @@
         >
       </router-link>
     </nav>
-    <main class="flex-grow flex">
+    <main class="flex">
       <slot />
     </main>
   </div>

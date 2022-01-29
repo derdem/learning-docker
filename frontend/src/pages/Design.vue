@@ -1,18 +1,24 @@
 <template>
   <CompleteWidthTemplateVue>
-    <div class="grid grid-cols-2 gap-4">
-      <router-link to="/animations">
-        <div class="m-2 p-2 w-32 h-32 bg-slate-700 hover:custom">
-          <img src="@/assets/earthAnimation.gif" />
-          Animation
-        </div>
-      </router-link>
-
+    <router-link to="/animations">
       <div class="m-2 p-2 w-32 h-32 bg-slate-700">
-        <img src="@/assets/resources.jpeg" />
-        Resources
+        <img src="@/assets/earthAnimation.gif" />
+        Animation
       </div>
+    </router-link>
+
+    <router-link to="/background-colors">
+      <div class="m-2 p-2 w-32 h-32 bg-slate-700">
+        <img src="@/assets/earthAnimation.gif" />
+        Background Colors
+      </div>
+    </router-link>
+
+    <div class="m-2 p-2 w-32 h-32 bg-slate-700">
+      <img src="@/assets/resources.jpeg" />
+      Resources
     </div>
+
     <!-- <a href="https://pixabay.com">Pixabay</a> -->
   </CompleteWidthTemplateVue>
 </template>

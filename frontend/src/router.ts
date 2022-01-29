@@ -8,6 +8,7 @@ const SimpleCentered = () => import("@/pages/SimpleCentered.vue");
 const FunctionalProgramming = () => import("@/pages/FunctionalProgramming.vue");
 const Design = () => import("@/pages/Design.vue");
 const Animations = () => import("@/pages/Animations.vue");
+const BackgroundColors = () => import("@/pages/BackgroundColors.vue");
 
 const routes: RouteRecordRaw[] = [
   {
@@ -46,6 +47,12 @@ const routes: RouteRecordRaw[] = [
     component: Animations,
     name: "Animations",
     meta: { title: "Animations" },
+  },
+  {
+    path: "/background-colors",
+    component: BackgroundColors,
+    name: "Background Colors",
+    meta: { title: "Background Colors" },
   },
 ];
 
