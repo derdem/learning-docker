@@ -1,31 +1,31 @@
 <template>
   <CompleteWidthTemplateVue>
     <div class="basis-full">Hover effects</div>
-    <div class="m-2 p-2 w-32 h-32 bg-slate-700 relative transition effect1">
+    <div class="m-2 p-2 w-32 h-32 bg-slate-500 relative transition effect1">
       <div class="center">Example1</div>
     </div>
 
-    <div class="m-2 p-2 w-32 h-32 bg-slate-700 relative transition effect2">
+    <div class="m-2 p-2 w-32 h-32 bg-slate-500 relative transition effect2">
       <div class="center">Example2</div>
     </div>
 
-    <div class="m-2 p-2 w-32 h-32 bg-slate-700 relative transition effect3">
+    <div class="m-2 p-2 w-32 h-32 bg-slate-500 relative transition effect3">
       <div class="center">Example3</div>
     </div>
 
-    <div class="m-2 p-2 w-32 h-32 bg-slate-700 relative transition effect4">
+    <div class="m-2 p-2 w-32 h-32 bg-slate-500 relative transition effect4">
       <div class="center">Example4</div>
     </div>
 
-    <div class="m-2 p-2 w-32 h-32 bg-slate-700 relative transition effect5">
+    <div class="m-2 p-2 w-32 h-32 bg-slate-500 relative transition effect5">
       <div class="center">Example5</div>
     </div>
 
-    <div class="m-2 p-2 w-32 h-32 bg-slate-700 relative transition effect6">
+    <div class="m-2 p-2 w-32 h-32 bg-slate-500 relative transition effect6">
       <div class="center">Example6</div>
     </div>
 
-    <div class="m-2 p-2 w-32 h-32 bg-slate-700 relative transition effect7">
+    <div class="m-2 p-2 w-32 h-32 bg-slate-500 relative transition effect7">
       <div class="center">Example7</div>
     </div>
   </CompleteWidthTemplateVue>
