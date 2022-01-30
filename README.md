@@ -1,3 +1,5 @@
+My own project
+
 # mysql container
 
 docker run -p 3306:3306 --name database-mysql -e MYSQL_ROOT_PASSWORD=envelio123 -d mysql:latest
