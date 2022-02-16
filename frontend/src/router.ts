@@ -9,6 +9,7 @@ const FunctionalProgramming = () => import("@/pages/FunctionalProgramming.vue");
 const Design = () => import("@/pages/Design.vue");
 const Animations = () => import("@/pages/Animations.vue");
 const BackgroundColors = () => import("@/pages/BackgroundColors.vue");
+const ScrollEffects = () => import("@/pages/ScrollEffects.vue");
 
 const routes: RouteRecordRaw[] = [
   {
@@ -53,6 +54,12 @@ const routes: RouteRecordRaw[] = [
     component: BackgroundColors,
     name: "Background Colors",
     meta: { title: "Background Colors" },
+  },
+  {
+    path: "/scroll-effects",
+    component: ScrollEffects,
+    name: "Scroll Effects",
+    meta: { title: "Scroll Effects" },
   },
 ];
 
